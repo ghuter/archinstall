@@ -155,6 +155,6 @@ pacman -S compton lxappearance sxhkd dmenu i3-scrot i3status dunst ffmpeg python
 echo "Installing AUR apps..."
 yaourt -S bmenu rofi-surfraw-git
 echo "Installing additional apps..."
-pacman -S mpd ncmpcpp mpc code firefox pcmanfm
+pacman -S mpd ncmpcpp mpc code firefox pcmanfm surf
 yaourt -S google-chrome
 
