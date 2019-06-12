@@ -1,0 +1,381 @@
+2bwm  --  A fast floating window manager
+abook  --  Text-based addressbook designed for use with Mutt
+accountsservice  --  D-Bus interface for user account query and manipulation
+ack  --  A Perl-based grep replacement, aimed at programmers with large trees of heterogeneous source code
+acpi  --  Client for battery, power, and thermal readings
+acpid  --  A daemon for delivering ACPI power management events with netlink support
+airgeddon-git  --  Multi-use bash script for Linux systems to audit wireless networks
+alsaequal  --  Real-time adjustable equalizer plugin for ALSA sound server
+anbox-modules-dkms-git  --  Required kernel module sources for Android
+apache  --  A high performance Unix-based HTTP server
+arandr  --  Provide a simple visual front end for XRandR 1.2.
+aria2  --  Download utility that supports HTTP(S), FTP, BitTorrent, and Metalink
+artwork-i3  --  Wallpapers for manjaro-i3
+asciinema  --  Record and share terminal sessions
+b43-fwcutter  --  firmware extractor for the b43 kernel module
+bash-completion  --  Programmable completion for the bash shell
+bb  --  ASCII-art demo that uses AAlib
+beets  --  Flexible music library manager and tagger
+bettercap  --  Swiss army knife for network attacks and monitoring
+betterlockscreen  --  A simple lock script for i3lock-color
+bitlbee  --  Brings instant messaging (XMPP, MSN, Yahoo!, AIM, ICQ, Twitter) to IRC
+bleachbit  --  Deletes unneeded files to free disk space and maintain privacy
+blueman  --  GTK+ Bluetooth Manager
+bmenu  --  Simple system menu for commandline
+bmon  --  Portable bandwidth monitor and rate estimator
+bully  --  Retrieve WPA/WPA2 passphrase from a WPS enabled access point
+calf  --  LV2 plug-in suite and standalone Jack host
+ccls  --  C/C++/ObjC language server supporting cross references, hierarchies, completion and semantic highlighting
+clipit  --  Lightweight GTK+ clipboard manager (fork of Parcellite)
+cmake  --  A cross-platform open-source make system
+connman  --  Intel's modular network connection manager
+cppcheck  --  A tool for static C/C++ code analysis
+cpupower  --  Linux kernel tool to examine and tune power saving related features of your processor
+cquery  --  cquery is a highly-scalable, low-latency language server for C/C++/Objective-C.
+crda  --  Central Regulatory Domain Agent for wireless networks
+create_ap  --  A shell script to create a NATed/Bridged Software Access Point
+cronie  --  Daemon that runs specified programs at scheduled times and related tools
+crunch  --  A wordlist generator where you can specify a standard character set or a character set you specify and generate all possible combinations and permutations.
+ctags  --  Generates an index file of language objects found in source files
+dash  --  POSIX compliant shell that aims to be as small as possible
+deluge  --  A BitTorrent client with multiple user interfaces in a client/server model
+dfc  --  Display file system space usage using graphs and colors
+dhclient  --  A standalone DHCP client from the dhcp package
+dhcp  --  A DHCP server, client, and relay agent
+dialog  --  A tool to display dialog boxes from shell scripts
+dillo  --  A small, fast graphical web browser built on FLTK
+dosbox  --  Emulator with builtin DOS for running DOS Games
+downgrade  --  Bash script for downgrading one or more packages to a version in your cache or the A.L.A.
+doxygen  --  Documentation system for C++, C, Java, IDL and PHP
+dsniff  --  Collection of tools for network auditing and penetration testing
+dzen2  --  General purpose messaging, notification and menuing program for X11
+ecryptfs-utils  --  Enterprise-class stacked cryptographic filesystem for Linux
+edbrowse  --  Line-oriented editor, browser and mail client
+edex-ui  --  A science fiction desktop running everywhere. Awesome.
+efibootmgr  --  Tool to modify UEFI Firmware Boot Manager Variables
+enlightenment  --  Enlightenment window manager
+entr  --  Run arbitrary commands when files change
+ettercap  --  A network sniffer/interceptor/logger for ethernet LANs - console
+exfat-utils  --  Utilities for exFAT file system
+expect  --  A tool for automating interactive applications
+f2fs-tools  --  Tools for Flash-Friendly File System (F2FS)
+feh  --  Fast and light imlib2-based image viewer
+ffmpegthumbnailer  --  Lightweight video thumbnailer that can be used by file managers.
+fig2dev  --  Format conversion utility that can be used with xfig
+filezilla  --  Fast and reliable FTP, FTPS and SFTP client
+firefox  --  Standalone web browser from mozilla.org
+fish  --  Smart and user friendly shell intended mostly for interactive use
+fltrdr  --  A TUI text reader for the terminal
+fzy  --  A better fuzzy finder
+gcolor2  --  A simple GTK+2 color selector
+geckodriver  --  Proxy for using W3C WebDriver-compatible clients to interact with Gecko-based browsers.
+gimp  --  GNU Image Manipulation Program
+gitflow-avh  --  Extend git with Vincent Driessen's branching model. The AVH Edition adds more functionality.
+gitkraken  --  The intuitive, fast, and beautiful cross-platform Git client.
+gnome-keyring  --  Stores passwords and encryption keys
+gnu-netcat  --  GNU rewrite of netcat, the network piping application
+gnuplot  --  Plotting package which outputs to X11, PostScript, PNG, GIF, and others
+go  --  Core compiler tools for the Go programming language
+google-glog  --  Logging library for C++
+gparted  --  A Partition Magic clone, frontend to GNU Parted
+gpick  --  Advanced color picker written in C++ using GTK+ toolkit
+graphviz  --  Graph visualization software
+grub  --  GNU GRand Unified Bootloader (2)
+gst-libav  --  GStreamer open-source multimedia framework FFmpeg plugin
+gst-plugins-ugly  --  GStreamer open-source multimedia framework ugly plugins
+gtksourceview-pkgbuild  --  PKGBUILD syntax highlight support in GtkSourceView
+gtypist  --  universal typing tutor
+gufw  --  Uncomplicated way to manage your Linux firewall
+gv  --  A program to view PostScript and PDF documents
+gvfs-afc  --  Virtual filesystem implementation for GIO (AFC backend; Apple mobile devices)
+gvfs-gphoto2  --  Virtual filesystem implementation for GIO (gphoto2 backend; PTP camera, MTP media player)
+gvfs-mtp  --  Virtual filesystem implementation for GIO (MTP backend; Android, media player)
+gvfs-smb  --  Virtual filesystem implementation for GIO (SMB/CIFS backend; Windows client)
+hashcat  --  Multithreaded advanced password recovery utility
+haveged  --  Entropy harvesting daemon using CPU timings
+hexchat  --  A popular and easy to use graphical IRC (chat) client
+highlight  --  Fast and flexible source code highlighter (CLI version)
+htop  --  Interactive process viewer
+httrack  --  An easy-to-use offline browser utility
+intel-ucode  --  Microcode update files for Intel CPUs
+ipw2100-fw  --  Intel Centrino Drivers firmware for IPW2100
+ipw2200-fw  --  Firmware for the Intel PRO/Wireless 2200BG
+irssi  --  Modular text mode IRC client with Perl scripting
+isousb  --  A graphical tool to copy a hybrid ISO onto a USB key.
+iwd  --  Internet Wireless Daemon
+jshon  --  A json parser for the shell.
+klavaro  --  Free touch typing tutor program
+ktouch  --  Touch Typing Tutor
+kvantum-manjaro  --  Maia and Breath themes for kvantum-qt5
+lazygit  --  A simple terminal UI for git commands
+ldoc  --  LuaDoc-compatible documentation generation system
+lemonbar-xft  --  A lightweight xcb based bar with ported xft support.
+lf  --  A terminal file manager inspred by ranger written in Go
+lib32-clang  --  C language family frontend for LLVM
+lib32-flex  --  A tool for generating text-scanning programs
+lib32-libva-vdpau-driver  --  VDPAU backend for VA API (32-bit)
+lib32-mesa-demos  --  Mesa demos and tools (32-bit)
+lib32-mesa-vdpau  --  Mesa VDPAU drivers (32-bit)
+lib32-vulkan-icd-loader  --  Vulkan Installable Client Driver (ICD) Loader (32-bit)
+lib32-vulkan-intel  --  Intel's Vulkan mesa driver (32-bit)
+lib32-vulkan-radeon  --  Radeon's Vulkan mesa driver (32-bit)
+libdvdcss  --  Portable abstraction library for DVD decryption
+libgpod  --  A shared library to access the contents of an iPod
+libiodbc  --  Independent Open DataBase Connectivity for Linux
+libreoffice-still  --  LibreOffice maintenance branch
+libselinux  --  SELinux library and simple utilities
+libva-mesa-driver  --  VA-API implementation for gallium
+libva-vdpau-driver  --  VDPAU backend for VA API
+lightdm-settings  --  A configuration tool for the LightDM display manager
+lighttpd  --  A secure, fast, compliant and very flexible web-server
+linux316-nvidia  --  NVIDIA drivers for linux.
+linux420-headers  --  Header files and scripts for building modules for Linux420 kernel
+linux420-r8168  --  A kernel module for Realtek 8168 network cards
+linux52-headers  --  Header files and scripts for building modules for Linux52 kernel
+linux52-r8168  --  A kernel module for Realtek 8168 network cards
+lsd  --  Modern ls with a lot of pretty colors and awesome icons
+lsp-plugins  --  Collection of free plugins compatible with LADSPA, LV2 and LinuxVST
+ltrace  --  Tracks runtime library calls in dynamically linked programs
+lutris  --  Open Gaming Platform
+lxappearance  --  Feature-rich GTK+ theme switcher of the LXDE Desktop
+lxinput  --  Small program to configure keyboard and mouse for LXDE
+lynx  --  A text browser for the World Wide Web
+maia-console  --  Maia color scheme for the console and shell dialog
+maltego  --  Maltego information gathering software by Paterva
+mandoc  --  A suite of tools compiling mdoc from the OpenBSD project
+manjaro-alsa  --  Manjaro ALSA support (Meta-PKG)
+manjaro-browser-settings  --  Manjaro Linux settings browser defaults
+manjaro-firmware  --  Extra firmwares for Manjaro Linux
+manjaro-hello  --  A tool providing access to documentation and support for new Manjaro users.
+manjaro-hotfixes  --  Manjaro Linux Hotfixes
+manjaro-i3-settings  --  Manjaro Linux i3 settings
+manjaro-printer  --  Manjaro Printer support (Meta-PKG)
+manjaro-release  --  Manjaro's release definition
+manjaro-settings-manager-notifier  --  Manjaro Linux System Settings Tool (Notifier)
+manjaro-system  --  Manjaro Linux System - Update script
+mariadb  --  Fast SQL database server, derived from MySQL
+mda.lv2  --  A port of the MDA VST plugins to LV2
+mdk3  --  WLAN penetration tool
+memtest86+  --  An advanced memory diagnostic tool
+mesa-vdpau  --  Mesa VDPAU drivers
+minecraft  --  An open-world game whose gameplay revolves around breaking and placing blocks
+minecraft-launcher  --  Official Minecraft Launcher
+minetest  --  Multiplayer infinite-world block sandbox game
+mkinitcpio-openswap  --  mkinitcpio hook to open swap at boot time
+mksh  --  MirBSD Korn Shell
+mlocate  --  Merging locate/updatedb implementation
+mobile-broadband-provider-info  --  Network Management daemon
+moc  --  An ncurses console audio player designed to be powerful and easy to use
+modemmanager  --  Mobile broadband modem management service
+morc_menu  --  A categorized applications menu using dmenu and bash
+moreutils  --  A growing collection of the unix tools that nobody thought to write thirty years ago
+mpc  --  Minimalist command line interface to MPD
+mpd  --  Flexible, powerful, server-side application for playing music
+mps-youtube  --  Terminal based YouTube jukebox with playlist management
+mpv  --  a free, open source, and cross-platform media player
+mupdf  --  Lightweight PDF and XPS viewer
+musl  --  Lightweight implementation of C standard library
+mutt-wizard-git  --  A simple interface to auto-configure neomutt and isync with safe passwords
+ncdu  --  Disk usage analyzer with an ncurses interface
+ncmpcpp  --  Almost exact clone of ncmpc with some new features
+ncpamixer  --  ncurses PulseAudio Mixer
+ncurses5-compat-libs  --  System V Release 4.0 curses emulation library, ABI 5
+neofetch  --  A CLI system information tool written in BASH that supports displaying images.
+nethogs  --  A net top tool which displays traffic used per process instead of per IP or interface
+netsed  --  Alter the contents of packets forwarded through network in real time
+networkmanager-openconnect  --  NetworkManager VPN plugin for OpenConnect
+networkmanager-openvpn  --  NetworkManager VPN plugin for OpenVPN
+networkmanager-pptp  --  NetworkManager VPN plugin for PPTP
+networkmanager-vpnc  --  NetworkManager VPN plugin for VPNC
+newsboat  --  An RSS/Atom feed reader for text terminals
+nfs-utils  --  Support programs for Network File Systems
+ngrep  --  A grep-like utility that allows you to search for network packets on an interface.
+nmap  --  Utility for network discovery and security auditing
+nnn  --  The fastest terminal file manager ever written.
+notification-daemon  --  Server implementation of the freedesktop.org desktop notification specification
+notmuch  --  Notmuch is not much of an email program
+npm  --  A package manager for javascript
+nss-mdns  --  glibc plugin providing host name resolution via mDNS
+ntfs-3g  --  NTFS filesystem driver and utilities
+ntp  --  Network Time Protocol reference implementation
+numlockx  --  Turns on the numlock key in X11.
+offlineimap  --  Synchronizes emails between two repositories
+oomox  --  Graphical application for generating different color variations of Numix/Materia/Arc theme (GTK2, GTK3), gnome-colors and ArchDroid icon themes. Have a hack for HiDPI in gtk2.
+open-fuse-iso  --  Rapid image mounting/unmounting in userspace using fuseiso.
+os-prober  --  Utility to detect other OSes on a set of drives
+pamac-gtk  --  A Package Manager based on libalpm with AUR and Appstream support
+pam-gnupg-git  --  Unlock GnuPG keys on login
+pandoc-citeproc  --  Supports using pandoc with citeproc
+pandoc-crossref  --  Pandoc filter for cross-references
+patchutils  --  A small collection of programs that operate on patch files
+pavucontrol  --  PulseAudio Volume Control
+pcmanfm  --  Extremely fast and lightweight file manager
+pdf2djvu  --  Creates DjVu files from PDF files
+pdfjs  --  PDF reader in javascript
+peda  --  Python Exploit Development Assistance for GDB
+perl-file-mimeinfo  --  Determine file type, includes mimeopen and mimetype
+perl-image-exiftool  --  Reader and rewriter of EXIF informations that supports raw files
+pixiewps  --  Offline bruteforce of the WPS pin exploiting the low or non-existing entropy of some APs
+plan9port  --  Ports of applications from Plan 9
+poco  --  C++ class libraries for network-centric, portable applications, complete edition with debug libraries
+polkit-gnome  --  Legacy polkit authentication agent for GNOME
+porntime  --  Stream porn movies from torrents. Skip the downloads. Launch, click, watch.
+postgresql  --  Sophisticated object-relational DBMS
+postgresql-old-upgrade  --  PostgreSQL build for migrating between major versions with pg_upgrade
+powertop  --  A tool to diagnose issues with power consumption and power management
+proxychains-ng  --  A hook preloader that allows to redirect TCP traffic of existing dynamically linked programs through one or more SOCKS or HTTP proxies
+pulseaudio-alsa  --  ALSA Configuration for PulseAudio
+pulseaudio-equalizer  --  Equalizer for PulseAudio
+pulseeffects  --  Audio Effects for Pulseaudio Applications
+pyside2  --  Enables the use of Qt5 APIs in Python applications
+python2-notify  --  Python bindings for libnotify
+python2-pip  --  The PyPA recommended tool for installing Python packages
+python-pip  --  The PyPA recommended tool for installing Python packages
+python-pyperclip  --  A cross-platform clipboard module for Python
+python-pywal  --  Generate and change colorschemes on the fly
+qt5-3d  --  C++ and QML APIs for easy inclusion of 3D graphics
+qt5-canvas3d  --  A JavaScript 3D rendering API for Qt Quick
+qt5-charts  --  Provides a set of easy to use chart components
+qt5-connectivity  --  Provides access to Bluetooth hardware
+qt5ct  --  Qt5 Configuration Utility
+qt5-datavis3d  --  Qt Data Visualization module
+qt5-examples  --  Examples and demos from qt5 documentation
+qt5-gamepad  --  Adds support for getting events from gamepad devices
+qt5-imageformats  --  Plugins for additional image formats: TIFF, MNG, TGA, WBMP
+qt5-networkauth  --  Network authentication module
+qt5-remoteobjects  --  Inter-process communication (IPC) module developed for Qt
+qt5-scxml  --  Static and runtime integration of SCXML models into Qt code
+qt5-serialbus  --  Qt module for general purpose serial bus access
+qt5-styleplugins  --  Additional style plugins for Qt5
+qt5-translations  --  A cross-platform application and UI framework (Translations)
+qt5-virtualkeyboard  --  Virtual keyboard framework
+qt5-wayland  --  Provides APIs for Wayland
+qt5-webglplugin  --  QPA plugin for running an application via a browser using streamed WebGL commands
+qt5-webview  --  Provides a way to display web content in a QML application
+qtcreator  --  Lightweight, cross-platform integrated development environment
+qtile  --  A full-featured, pure-Python tiling window manager
+qutebrowser  --  A keyboard-driven, vim-like browser based on PyQt5
+quvi  --  Command-line tool for parsing video download links.
+radare2  --  Open-source tools to disasm, debug, analyze and manipulate binary files
+ranger  --  A simple, vim-like file manager.
+reaver  --  Brute force attack against Wifi Protected Setup
+redshift  --  Adjusts the color temperature of your screen according to your surroundings.
+rofi-calc  --  Do calculations in rofi
+rofi-surfraw-git  --  Universal tool to search the internet
+rtl8723de-dkms  --  RTL8723 wireless + bluetooth modules (DKMS)
+rtv  --  Browse Reddit from your terminal
+ruby-docs  --  Documentation files for ruby
+ruby-rdoc  --  Command-line documentation generator for Ruby projects
+sbxkb  --  Simple tray XKB indicator
+screenfetch  --  CLI Bash script to show system/theme info in screenshots
+shellcheck  --  Shell script analysis tool
+sigil  --  WYSIWYG ebook editor
+simple-mtpfs  --  A FUSE filesystem that supports reading/writing from MTP devices
+skroll  --  text scroller
+snapd  --  Service and tools for management of snap packages.
+sox  --  The Swiss Army knife of sound processing tools
+spectre-meltdown-checker  --  Spectre & Meltdown vulnerability/mitigation checker (CVE-2017-5753, CVE-2017-5715, CVE-2017-5754)
+speedtest-cli  --  Command line interface for testing internet bandwidth using speedtest.net
+splint  --  A tool for statically checking C programs for security vulnerabilities and coding mistakes
+spotify  --  A proprietary music streaming service
+spyder2  --  The Scientific Python Development Environment (Python 2 version)
+sslstrip  --  Python tool to hijack HTTPS connections during a MITM attack
+strace  --  A diagnostic, debugging and instructional userspace tracer
+sublime-text  --  Sublime Text is a sophisticated text editor for code, markup and prose
+subversion  --  A Modern Concurrent Version Control System
+surf  --  A simple web browser based on WebKit/GTK+.
+sxiv-rifle  --  Browse through images in directory after opening a single file
+syslog-ng  --  Next-generation syslogd with advanced networking and filtering capabilities
+tcc  --  Tiny C Compiler
+terminology  --  EFL based terminal emulator
+terminus-font  --  Monospace bitmap font (for X11 and console)
+texlive-bibtexextra  --  TeX Live - Additional BibTeX styles and bibliography databases
+texlive-fontsextra  --  TeX Live - all sorts of extra fonts
+texlive-formatsextra  --  TeX Live - collection of extra TeX 'formats'
+texlive-games  --  TeX Live - Setups for typesetting various board games, including chess
+texlive-humanities  --  TeX Live - LaTeX packages for law, linguistics, social sciences, and humanities
+texlive-langchinese  --  TeX Live - Fonts and macro packages to typeset Chinese texts
+texlive-langcyrillic  --  TeX Live - Fonts and macro packages to typeset Cyrillic texts
+texlive-langextra  --  TeX Live - Bundle of all extra language support
+texlive-langgreek  --  TeX Live - Fonts and support for typesetting Greek
+texlive-langjapanese  --  TeX Live - Fonts and macro packages to typeset Japanese texts
+texlive-langkorean  --  TeX Live - Fonts and macro packages to typeset Korean texts
+texlive-music  --  TeX Live - Music typesetting packages
+texlive-pictures  --  TeX Live - Packages for drawings graphics
+texlive-pstricks  --  TeX Live - Additional PSTricks packages
+texlive-publishers  --  TeX Live - LaTeX classes and packages for specific publishers
+texlive-science  --  TeX Live - Typesetting for mathematics, natural and computer sciences
+the_silver_searcher  --  Code searching tool similar to Ack, but faster
+tizonia-all  --  Command-line cloud music player for Linux with support for Spotify, Google Play Music, YouTube, SoundCloud, Dirble, Plex servers and Chromecast devices.
+tk  --  A windowing toolkit for use with tcl
+tldr  --  Command line client for tldr, a collection of simplified and community-driven man pages.
+tlp  --  Linux Advanced Power Management
+tor-browser  --  Tor Browser Bundle: anonymous browsing using Firefox and Tor (international PKGBUILD)
+torsocks  --  Wrapper to safely torify applications
+ttf-inconsolata  --  Monospace font for pretty code listings and for the terminal
+ttf-indic-otf  --  Indic Opentype Fonts collection
+tty-clock  --  Digital clock in ncurses
+unclutter  --  A small program for hiding the mouse cursor
+unison  --  File-synchronization tool
+unrar  --  The RAR uncompression program
+urlview  --  A curses URL parser for text files
+veracrypt  --  Disk encryption with strong security based on TrueCrypt
+vertex-maia-themes  --  Manjaro's Maia colored variant of the Vertex-themes
+vibrancy-icons-teal  --  Regular and Teal versions of the Vibrancy icon theme
+vifm  --  A file manager with curses interface, which provides Vi[m]-like environment
+virtualbox  --  Powerful x86 virtualization for enterprise as well as home use
+virtualbox-guest-dkms  --  VirtualBox Guest kernel modules sources
+virtualbox-guest-iso  --  The official VirtualBox Guest Additions ISO image
+vis  --  modern, legacy free, simple yet efficient vim-like editor
+vlc  --  Multi-platform MPEG, VCD/DVD, and DivX player
+volumeicon  --  Volume control for the system tray
+vscodium  --  Binary releases of VS Code without MS branding/telemetry/licensing.
+vulkan-intel  --  Intel's Vulkan mesa driver
+vulkan-radeon  --  Radeon's Vulkan mesa driver
+w3m  --  Text-based Web browser as well as pager
+webkitgtk  --  Legacy Web content engine for GTK+ 3
+wesnoth  --  A turn-based strategy game on a fantasy world
+wicd  --  Wired and wireless network manager for Linux
+wine_gecko  --  Wine's built-in replacement for Microsoft's Internet Explorer
+wine-mono  --  Wine's built-in replacement for Microsoft's .NET Framework
+winetricks  --  Script to install various redistributable runtime libraries in Wine.
+wireshark-qt  --  Network traffic and protocol analyzer/sniffer - Qt GUI
+wmctrl  --  Control your EWMH compliant window manager from command line
+wmutils  --  A set of tools for X windows manipulation.
+wordgrinder  --  A word processor for processing words.
+xarchiver  --  GTK+ frontend to various command line archivers
+xautolock  --  An automatic X screen-locker/screen-saver
+xcursor-chameleon-pearl  --  Chameleon X Cursor Theme (pearl flavour)
+xcursor-maia  --  Cursor theme - part of the Manjaro Maia set
+xdg-su  --  Run a program as root with the most environment appropriate available graphical authentication agent
+xdotool  --  Command-line X11 automation tool
+xf86-input-elographics  --  X.org Elographics TouchScreen input driver
+xf86-input-evdev  --  X.org evdev input driver
+xf86-input-keyboard  --  X.Org keyboard input driver
+xf86-input-mouse  --  X.org mouse input driver
+xf86-input-void  --  X.org void input driver
+xf86-video-amdgpu  --  X.org amdgpu video driver
+xf86-video-ati  --  X.org ati video driver
+xf86-video-intel  --  X.org Intel i810/i830/i915/945G/G965+ video drivers
+xf86-video-nouveau  --  Open Source 3D acceleration driver for nVidia cards
+xfburn  --  A simple CD/DVD burning tool based on libburnia libraries
+xfce4-power-manager  --  Power manager for Xfce desktop
+xfig  --  An interactive drawing tool
+xorg-twm  --  Tab Window Manager for the X Window System
+xorg-xbacklight  --  RandR-based backlight control application
+xorg-xev  --  Print contents of X events
+xorg-xhost  --  Server access control program for X
+xorg-xinit  --  X.Org initialisation program
+xorg-xkill  --  Kill a client by its X resource
+xorg-xsetroot  --  Classic X utility to set your root window background to a given pattern or color
+xteddy  --  Your virtual comfort when things get rough
+yaourt  --  A pacman wrapper with extended features and AUR support
+yarn  --  Fast, reliable, and secure dependency management
+youtube-viewer  --  Command line utility for viewing YouTube videos
+zam-plugins  --  Collection of LADSPA/LV2/VST/JACK audio plugins for high-quality processing
+zathura-cb  --  Adds comic book support to zathura
+zathura-djvu  --  DjVu support for Zathura
+zathura-pdf-mupdf  --  PDF support for Zathura (MuPDF backend) (Supports PDF, ePub, and OpenXPS)
+zathura-ps  --  Adds ps support to zathura by using the libspectre library
+zeal  --  An offline API documentation browser
+zsh  --  A very advanced and programmable command interpreter (shell) for UNIX
