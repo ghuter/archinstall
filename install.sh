@@ -16,7 +16,7 @@ if [ ! -d /sys/firmware/efi/efivars ]; then
     echo "BIOS mode detected"
 fi
 
-if ping -c1 archlinux.org > /dev/null 2>&1; then
+if ! ping -c1 archlinux.org > /dev/null 2>&1; then
     echo "fix your network connection first"
     exit 1
 fi
@@ -45,14 +45,16 @@ echo "Do you want to edit the mirror list ? [Y/n]: "
 read -r ml
 
 if [ "$ml" = "Y" ] || [ "$ml" = "y" ]; then
-    vi /etc/pacman.d//mirrorlist
+    vi /etc/pacman.d/mirrorlist
 fi
 
+pacman -Sy
 pacstrap /mnt base
 
 genfstab -U /mnt >> /mnt/etc/fstab
 
 arch-root /mnt
+pacman -Syu
 
 clear
 echo "Choose your region in:"
@@ -117,10 +119,8 @@ pacman -S grub os-prober
 grub-install --target=i386-pc "$disk"
 grub-mkconfig -o /boot/grub/grub.cfg
 
-clear
 echo "For nvidia drivers, see at https://wiki.archlinux.org/index.php/NVIDIA"
 
-clear
 echo "Installing Xorg..."
 pacman -S xorg
 echo "Setting keyboard layout..."
@@ -151,10 +151,45 @@ echo "Installing the i3 WM..."
 pacman -S i3-gaps
 
 echo "Installing basic applications..."
-pacman -S compton lxappearance sxhkd dmenu i3-scrot i3status dunst ffmpeg python-pywal mpv feh yaourt neofetch neovim htop
+pacman -S compton lxappearance sxhkd dmenu i3-scrot i3status dunst ffmpeg python-pywal mpv feh yaourt neofetch neovim htop curl wget youtube-dl youtube-viewer betterlockscreen xdotool lemonbar-xft pass mupdf zathura
 echo "Installing AUR apps..."
 yaourt -S bmenu rofi-surfraw-git
 echo "Installing additional apps..."
-pacman -S mpd ncmpcpp mpc code firefox pcmanfm surf
-yaourt -S google-chrome
+pacman -S mpd ncmpcpp mpc code firefox pcmanfm surf go nnn
+yaourt -S google-chrome lf
+
+clear
+echo "Configuring your new system..."
+su "$user" -c "zsh"
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+clear
+echo "Do you want to continue with default configuration ? [Y/n]"
+read -r conf
+if [ "$conf" = "Y" ] || [ "$conf" = "y" ]; then
+    exit 0
+fi
+cd /home/"$user" || exit 1
+export HOME="/home/$user"
+mkdir -p clones
+sudo pacman -S git gcc make
+git clone https://github.com/ghuter/scripts .scripts
+cd clones || exit 1
+git clone https://github.com/ghuter/st
+cd st || exit 1
+make && sudo make install
+cd .. || exit 1
+git clone https://github.com/ghuter/dotfiles
+cd dotfiles || exit 1
+cp .Xresources .bash_zsh_common .zshrc .mailcap .nanorc .urlview "$HOME"/
+cp -r .config/htop .config/i3 .config/nvim .config/rofi .config/sxhkd .config/via .config/youtube-viewer .config/zathura .config/compton.conf .config/i3-scrot.conf "$HOME"/.config/
+mkdir "$HOME"/.mozilla/firefox/*.default/chrome
+cp .mozilla/firefox/*.default/chrome/userContent.css "$HOME"/.mozilla/firefox/*.default/chrome/
+
+
+echo "Do you want to reboot now ? [Y/n]"
+read -r rb
+if [ "$rb" = "Y" ] || [ "$rb" = "y" ]; then
+    reboot
+fi
 
