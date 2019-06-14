@@ -35,6 +35,9 @@ read -r root
 echo "Enter the boot partition (leave blank if there are none): "
 read -r boot
 
+mkfs.ext4 "$root"
+[ -n "$boot" ] && mkfs.ext4 "$boot"
+
 mount "$root" /mnt
 if [ -n "$boot" ]; then
     mkdir /mnt/boot
