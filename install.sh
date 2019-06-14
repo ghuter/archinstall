@@ -57,7 +57,6 @@ pacstrap /mnt base
 genfstab -U /mnt >> /mnt/etc/fstab
 
 arch-root /mnt
-pacman -Syu
 
 clear
 echo "Choose your region in:"
@@ -148,7 +147,7 @@ ln -s /bin/sh /usr/bin/dash
 
 echo "New user name: "
 read -r user
-adduser -m -s /bin/zsh "$user"
+useradd -m -s /bin/zsh "$user"
 
 echo "Installing the i3 WM..."
 pacman -S i3-gaps
