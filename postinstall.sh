@@ -4,7 +4,7 @@ cd "$HOME" || exit 1
 
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-sudo pacman -S git gcc make
+sudo pacman -S gcc make
 git clone https://github.com/ghuter/scripts .scripts
 
 mkdir -p clones

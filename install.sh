@@ -50,7 +50,6 @@ if [ "$ml" = "Y" ] || [ "$ml" = "y" ]; then
     vi /etc/pacman.d/mirrorlist
 fi
 
-pacman -Sy
 pacstrap /mnt base
 
 genfstab -U /mnt >> /mnt/etc/fstab

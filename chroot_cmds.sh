@@ -99,10 +99,11 @@ echo "Installing the i3 WM..."
 pacman -S i3-gaps
 
 echo "Installing basic applications..."
-pacman -S compton lxappearance sxhkd dmenu i3-scrot i3status dunst ffmpeg python-pywal mpv feh yaourt neofetch neovim htop curl wget youtube-dl youtube-viewer betterlockscreen xdotool lemonbar-xft pass mupdf zathura
+pacman -S compton lxappearance sxhkd dmenu i3-scrot i3status dunst ffmpeg python-pywal mpv feh neofetch neovim htop curl wget youtube-dl youtube-viewer xdotool pass mupdf zathura git
+git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 echo "Installing AUR apps..."
-yaourt -S bmenu rofi-surfraw-git
+yay -S bmenu rofi-surfraw-git lemonbar-xft-git betterlockscreen
 echo "Installing additional apps..."
 pacman -S mpd ncmpcpp mpc code firefox pcmanfm surf go nnn
-yaourt -S google-chrome lf
+yay -S google-chrome lf
 
