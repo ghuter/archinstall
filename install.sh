@@ -27,6 +27,7 @@ echo "Configure your partitions:"
 echo "For example"
 echo "BIOS with MBR: /"
 echo "UEFI with GPT: /boot or /efi and /"
+echo "[Press enter to continue]"
 read -r
 cfdisk
 clear
@@ -77,6 +78,7 @@ hwclock --systohc
 
 clear
 echo "Uncomment en_US.UTF-8 UTF-8 and other needed locales..."
+echo "[Press enter to continue]"
 read -r
 vi /etc/locale.gen
 
@@ -89,6 +91,7 @@ echo "$lang" > /etc/locale.conf
 
 clear
 echo "Choose keyboard layout in:"
+echo "[Press enter to continue]"
 read -r
 find /usr/share/kbd/keymaps/ -type f -iname "*.map.gz" -exec basename {} \; | sed "s/.map.gz$//" | column | less
 read -r kbd_lay
@@ -132,6 +135,7 @@ localectl set-x11-keymap "$layout"
 
 clear
 echo "Setting power management (handled by systemd):"
+echo "[Press enter to continue]"
 read -r
 vi /etc/systemd/logind.conf
 
