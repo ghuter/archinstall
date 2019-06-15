@@ -34,6 +34,7 @@ echo "Choose keyboard layout in:"
 echo "[Press enter to continue]"
 read -r
 find /usr/share/kbd/keymaps/ -type f -iname "*.map.gz" -exec basename {} \; | sed "s/.map.gz$//" | column | less
+echo "Tap in your choice:"
 read -r kbd_lay
 echo KEYMAP="$kbd_lay" > /etc/vconsole.conf
 
@@ -85,13 +86,14 @@ pacman -S terminus-font ttf-dejavu ttf-roboto noto-fonts ttf-ubuntu-font-family 
 
 clear
 echo "Adding shells..."
-sudo pacman -S zsh bash dash bash-completion
+pacman -S zsh bash dash bash-completion
 echo "Symlink /bin/sh to dash"
 ln -s /bin/sh /usr/bin/dash
 
 echo "New user name: "
 read -r user
 useradd -m -s /bin/zsh "$user"
+passwd "$user"
 
 echo "Installing the i3 WM..."
 pacman -S i3-gaps
@@ -103,32 +105,4 @@ yaourt -S bmenu rofi-surfraw-git
 echo "Installing additional apps..."
 pacman -S mpd ncmpcpp mpc code firefox pcmanfm surf go nnn
 yaourt -S google-chrome lf
-
-clear
-echo "Configuring your new system..."
-su "$user" -c "zsh"
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
-clear
-echo "Do you want to continue with default configuration ? [Y/n]"
-read -r conf
-if [ "$conf" = "Y" ] || [ "$conf" = "y" ]; then
-    exit 0
-fi
-cd /home/"$user" || exit 1
-export HOME="/home/$user"
-mkdir -p clones
-sudo pacman -S git gcc make
-git clone https://github.com/ghuter/scripts .scripts
-cd clones || exit 1
-git clone https://github.com/ghuter/st
-cd st || exit 1
-make && sudo make install
-cd .. || exit 1
-git clone https://github.com/ghuter/dotfiles
-cd dotfiles || exit 1
-cp .Xresources .bash_zsh_common .zshrc .mailcap .nanorc .urlview "$HOME"/
-cp -r .config/htop .config/i3 .config/nvim .config/rofi .config/sxhkd .config/via .config/youtube-viewer .config/zathura .config/compton.conf .config/i3-scrot.conf "$HOME"/.config/
-mkdir "$HOME"/.mozilla/firefox/*.default/chrome
-cp .mozilla/firefox/*.default/chrome/userContent.css "$HOME"/.mozilla/firefox/*.default/chrome/
 

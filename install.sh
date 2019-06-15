@@ -25,7 +25,7 @@ timedatectl set-ntp true
 
 echo "Configure your partitions:"
 echo "For example"
-echo "BIOS with MBR: /"
+echo "BIOS with MBR: /boot and /"
 echo "UEFI with GPT: /boot or /efi and /"
 echo "[Press enter to continue]"
 read -r
@@ -33,17 +33,15 @@ cfdisk
 clear
 echo "Enter the root partition / (for instance /dev/sda2): "
 read -r root
-echo "Enter the boot partition (leave blank if there are none): "
+echo "Enter the boot partition: "
 read -r boot
 
 mkfs.ext4 "$root"
-[ -n "$boot" ] && mkfs.ext4 "$boot"
+mkfs.ext4 "$boot"
 
 mount "$root" /mnt
-if [ -n "$boot" ]; then
-    mkdir /mnt/boot
-    mount "$boot" /mnt/boot
-fi
+mkdir /mnt/boot
+mount "$boot" /mnt/boot
 
 echo "Do you want to edit the mirror list ? [Y/n]: "
 read -r ml
