@@ -5,103 +5,50 @@ if [ "$(id -g)" != "0" ]; then
     exit 1
 fi
 
-# Asuming the keyboard layout is 'azerty'
-# otherwise choose a file from /usr/share/kbd/keymaps/*/*.map.gz
-loadkeys fr-pc
-
-#is_in_uefi=1
-
-if [ ! -d /sys/firmware/efi/efivars ]; then
-    #is_in_uefi=0
-    echo "BIOS mode detected"
-fi
-
-if ! ping -c1 archlinux.org > /dev/null 2>&1; then
-    echo "fix your network connection first"
-    exit 1
-fi
-
-timedatectl set-ntp true
-
-echo "Configure your partitions:"
-echo "For example"
-echo "BIOS with MBR: /"
-echo "UEFI with GPT: /boot or /efi and /"
-echo "[Press enter to continue]"
-read -r
-cfdisk
-clear
-echo "Enter the root partition / (for instance /dev/sda2): "
-read -r root
-echo "Enter the boot partition (leave blank if there are none): "
-read -r boot
-
-mkfs.ext4 "$root"
-[ -n "$boot" ] && mkfs.ext4 "$boot"
-
-mount "$root" /mnt
-if [ -n "$boot" ]; then
-    mkdir /mnt/boot
-    mount "$boot" /mnt/boot
-fi
-
-echo "Do you want to edit the mirror list ? [Y/n]: "
-read -r ml
-
-if [ "$ml" = "Y" ] || [ "$ml" = "y" ]; then
-    vi /etc/pacman.d/mirrorlist
-fi
-
-pacman -Sy
-pacstrap /mnt base
-
-genfstab -U /mnt >> /mnt/etc/fstab
-
-arch-chroot /mnt
-
-clear
-echo "Choose your region in:"
-ls /usr/share/zoneinfo
-read -r region
-if [ ! -d /usr/share/zoneinfo/"$region" ]; then
-    echo "Not existing. Skipping..."
-else
+chroot_cmds() {
     clear
-    echo "Choose a city in :"
-    ls /usr/share/zoneinfo/"$region"
-    read -r city
-fi
+    echo "Choose your region in:"
+    ls /usr/share/zoneinfo
+    read -r region
+    if [ ! -d /usr/share/zoneinfo/"$region" ]; then
+        echo "Not existing. Skipping..."
+    else
+        clear
+        echo "Choose a city in :"
+        ls /usr/share/zoneinfo/"$region"
+        read -r city
+    fi
 
-ln -sf /usr/share/zoneinfo/"$region"/"$city" /etc/localtime
+    ln -sf /usr/share/zoneinfo/"$region"/"$city" /etc/localtime
 
-hwclock --systohc
+    hwclock --systohc
 
-clear
-echo "Uncomment en_US.UTF-8 UTF-8 and other needed locales..."
-echo "[Press enter to continue]"
-read -r
-vi /etc/locale.gen
+    clear
+    echo "Uncomment en_US.UTF-8 UTF-8 and other needed locales..."
+    echo "[Press enter to continue]"
+    read -r
+    vi /etc/locale.gen
 
-locale-gen
+    locale-gen
 
-clear
-echo "Enter LANG variable (for instance en_US.UTF-8): "
-read -r lang
-echo "$lang" > /etc/locale.conf
+    clear
+    echo "Enter LANG variable (for instance en_US.UTF-8): "
+    read -r lang
+    echo "$lang" > /etc/locale.conf
 
-clear
-echo "Choose keyboard layout in:"
-echo "[Press enter to continue]"
-read -r
-find /usr/share/kbd/keymaps/ -type f -iname "*.map.gz" -exec basename {} \; | sed "s/.map.gz$//" | column | less
-read -r kbd_lay
-echo KEYMAP="$kbd_lay" > /etc/vconsole.conf
+    clear
+    echo "Choose keyboard layout in:"
+    echo "[Press enter to continue]"
+    read -r
+    find /usr/share/kbd/keymaps/ -type f -iname "*.map.gz" -exec basename {} \; | sed "s/.map.gz$//" | column | less
+    read -r kbd_lay
+    echo KEYMAP="$kbd_lay" > /etc/vconsole.conf
 
-clear
-echo "hostname: "
-read -r hostname
-echo "$hostname" > /etc/hostname
-cat << EOF > /etc/hosts
+    clear
+    echo "hostname: "
+    read -r hostname
+    echo "$hostname" > /etc/hostname
+    cat << EOF > /etc/hosts
 127.0.0.1   localhost
 ::1         localhost
 127.0.0.1   $hostname.localdomain   $hostname
@@ -192,6 +139,61 @@ cp -r .config/htop .config/i3 .config/nvim .config/rofi .config/sxhkd .config/vi
 mkdir "$HOME"/.mozilla/firefox/*.default/chrome
 cp .mozilla/firefox/*.default/chrome/userContent.css "$HOME"/.mozilla/firefox/*.default/chrome/
 
+}
+
+# Asuming the keyboard layout is 'azerty'
+# otherwise choose a file from /usr/share/kbd/keymaps/*/*.map.gz
+loadkeys fr-pc
+
+#is_in_uefi=1
+
+if [ ! -d /sys/firmware/efi/efivars ]; then
+    #is_in_uefi=0
+    echo "BIOS mode detected"
+fi
+
+if ! ping -c1 archlinux.org > /dev/null 2>&1; then
+    echo "fix your network connection first"
+    exit 1
+fi
+
+timedatectl set-ntp true
+
+echo "Configure your partitions:"
+echo "For example"
+echo "BIOS with MBR: /"
+echo "UEFI with GPT: /boot or /efi and /"
+echo "[Press enter to continue]"
+read -r
+cfdisk
+clear
+echo "Enter the root partition / (for instance /dev/sda2): "
+read -r root
+echo "Enter the boot partition (leave blank if there are none): "
+read -r boot
+
+mkfs.ext4 "$root"
+[ -n "$boot" ] && mkfs.ext4 "$boot"
+
+mount "$root" /mnt
+if [ -n "$boot" ]; then
+    mkdir /mnt/boot
+    mount "$boot" /mnt/boot
+fi
+
+echo "Do you want to edit the mirror list ? [Y/n]: "
+read -r ml
+
+if [ "$ml" = "Y" ] || [ "$ml" = "y" ]; then
+    vi /etc/pacman.d/mirrorlist
+fi
+
+pacman -Sy
+pacstrap /mnt base
+
+genfstab -U /mnt >> /mnt/etc/fstab
+
+arch-chroot /mnt sh -c chroot_cmds
 
 echo "Do you want to reboot now ? [Y/n]"
 read -r rb
