@@ -57,7 +57,7 @@ pacstrap /mnt base
 
 genfstab -U /mnt >> /mnt/etc/fstab
 
-arch-root /mnt
+arch-chroot /mnt
 
 clear
 echo "Choose your region in:"
